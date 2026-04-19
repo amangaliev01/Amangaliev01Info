@@ -1,0 +1,74 @@
+:root {
+    --bg-color: #0b0b0d;
+    --card-bg: #16161a;
+    --accent-color: #00d4ff;
+    --red-accent: #ff4757;
+    --text-color: #e0e0e0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+.container { width: 90%; max-width: 1000px; margin: 0 auto; padding: 50px 0; }
+
+/* Hero Section */
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=1600&q=80'); /* Ночной город */
+    background-size: cover;
+    background-position: center;
+}
+
+.hero { text-align: center; }
+h1 { font-size: 5rem; letter-spacing: 10px; margin: 0; color: white; text-shadow: 0 0 20px var(--accent-color); }
+.subtitle { font-size: 1.2rem; color: var(--accent-color); text-transform: uppercase; margin-top: 10px; }
+
+.social-links { margin-top: 30px; font-size: 2rem; }
+.social-links a { color: white; margin: 0 15px; transition: 0.3s; text-decoration: none; }
+.social-links a:hover { color: var(--accent-color); transform: translateY(-5px); display: inline-block; }
+
+/* Секции */
+.section-title { text-align: center; font-size: 2.5rem; margin-bottom: 40px; }
+.card { background: var(--card-bg); padding: 30px; border-radius: 15px; border-left: 5px solid var(--accent-color); }
+
+/* Сетка увлечений */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+.grid-item { background: var(--card-bg); padding: 20px; border-radius: 10px; text-align: center; transition: 0.3s; border: 1px solid #333; }
+.grid-item:hover { border-color: var(--accent-color); transform: scale(1.05); }
+
+/* Vibes */
+.vibe-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.vibe-card { padding: 30px; border-radius: 20px; }
+.like { background: rgba(0, 212, 255, 0.1); border: 1px solid var(--accent-color); }
+.dislike { background: rgba(255, 71, 87, 0.1); border: 1px solid var(--red-accent); }
+.vibe-card h3 { font-size: 1.8rem; margin-top: 0; }
+.vibe-card ul { list-style: none; padding: 0; }
+.vibe-card li { margin: 10px 0; font-size: 1.1rem; }
+
+footer { text-align: center; padding: 40px; color: #666; font-size: 0.9rem; }
+
+.playlist-card {
+     background: var(--glass); 
+     border-radius: 20px; 
+     overflow: hidden;
+    }
+
+.track { padding: 15px 25px; border-bottom: 1px solid rgba(255,255,255,0.05); transition: 0.3s; }
+.track i { margin-right: 15px; color: var(--red); }
+.track:hover { background: rgba(255,255,255,0.1); padding-left: 35px; }
+
+
+@media (max-width: 768px) {
+    h1 { font-size: 3rem; }
+    .vibe-grid { grid-template-columns: 1fr; }
+}
